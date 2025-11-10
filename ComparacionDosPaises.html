@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Comparar dos países</title>
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+</head>
+<body>
+  <header id="header"></header>
+
+  <h1>Comparar dos países</h1>
+
+  <div class="container-compare">
+    <div class="container-input">
+      <input type="text" id="pais1" placeholder="Primer país (ej: España)" />
+      <input type="text" id="pais2" placeholder="Segundo país (ej: Francia)" />
+    </div>
+
+    <button onclick="compararPaises()">Comparar</button>
+  </div>
+
+  <div id="error" class="error"></div>
+  <div class="contenedor-paises" id="resultado"></div>
+
+  <script src="JS/comparacionDosPaises.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>
