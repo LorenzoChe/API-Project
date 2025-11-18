@@ -3,30 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/bootstrap.min.css">
-  <title>Document</title>
+  <title>Adivina el país</title>
+  <link rel="stylesheet" href="CSS/bootstrap.css">
+  <link rel="stylesheet" href="CSS/bootstrap-custom.css">
 </head>
 <body>
-   <header id="header"></header>
 
-   <section class="index-content">
-      <h1>Adivina el país por su bandera</h1>
+  <header id="header" class="container py-3 d-flex justify-content-center gap-3 flex-wrap"></header>
 
-      <img class="img-adivina" id="bandera" src="" alt="Bandera" />
+  <section class="container text-center mt-4">
+    <h1 class="mb-4">Adivina el país por su bandera</h1>
 
-        <input type="text" id="inputPais" placeholder="Escribe el nombre del país" />
+    <div class="d-flex justify-content-center mb-4">
+      <img id="bandera" src="" alt="Bandera" class="img-fluid" style="max-width:350px; height:200px; object-fit:cover; border:1px solid #000;">
+    </div>
 
-      <div class="container-buttons-adivinar">
-        <button id="btnVerificar">Verificar</button>
-        <button id="btnSiguiente">Siguiente</button>  
+    <div class="d-flex flex-column align-items-center">
+      <input type="text" id="inputPais" class="form-control w-50 mb-3" placeholder="Escribe el nombre del país">
+
+      <div class="d-flex justify-content-center gap-3 w-50">
+        <button id="btnVerificar" class="btn btn-primary w-50">Verificar</button>
+        <button id="btnSiguiente" class="btn btn-primary w-50">Siguiente</button>
       </div>
 
-      <div id="mensaje"></div>
-   </section>
+      <div id="mensaje" class="mt-4 fs-4 fw-bold"></div>
+    </div>
+  </section>
 
-
-<script src="JS/adivinaElPais.js"></script>
-<script src="JS/main.js"></script>
-
+  <script src="JS/adivinaElPais.js"></script>
+  <script src="JS/main.js"></script>
 </body>
 </html>

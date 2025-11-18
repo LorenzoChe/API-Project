@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparar dos países</title>
-  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.css">
+  <link rel="stylesheet" href="CSS/bootstrap-custom.css">
 </head>
 <body>
-  <header id="header"></header>
 
-  <h1>Comparar dos países</h1>
+  <header id="header" class="container py-3 d-flex justify-content-center gap-3 flex-wrap"></header>
 
-  <div class="container-compare">
-    <div class="container-input">
-      <input type="text" id="pais1" placeholder="Primer país (ej: España)" />
-      <input type="text" id="pais2" placeholder="Segundo país (ej: Francia)" />
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Comparar dos países</h1>
+
+    <div class="d-flex flex-column align-items-center mb-4">
+      <div class="row g-3 w-75">
+        <div class="col">
+          <input type="text" id="pais1" class="form-control" placeholder="Primer país (ej: España)">
+        </div>
+        <div class="col">
+          <input type="text" id="pais2" class="form-control" placeholder="Segundo país (ej: Francia)">
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-lg mt-3" onclick="compararPaises()">Comparar</button>
     </div>
 
-    <button onclick="compararPaises()">Comparar</button>
-  </div>
+    <div id="error" class="text-danger text-center mb-3"></div>
 
-  <div id="error" class="error"></div>
-  <div class="contenedor-paises" id="resultado"></div>
+    <div id="resultado" class="d-flex flex-wrap justify-content-center gap-4"></div>
+  </div>
 
   <script src="JS/comparacionDosPaises.js"></script>
   <script src="JS/main.js"></script>

@@ -3,60 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.css">
+  <link rel="stylesheet" href="CSS/bootstrap-custom.css">
+
   <title>Paises</title>
 </head>
 <body>
-  <header id="header"></header>
-  
-  <section class="index-container">
 
-    <!-- BUSCAR PAÍS -->
+  <header id="header" class="container py-3 d-flex justify-content-center gap-3 flex-wrap"></header>
 
-    <div class="container-busqueda">
-      <h1 class="titulo-busqueda">Buscar país</h1>
-      <input type="text" id="BuscarPais" placeholder="Ej: Argentina" />
-      <button onclick="buscarPais()">Buscar</button>
+  <section class="container mt-4">
+    <div class="row g-5">
 
-      <div id="resultado"></div>
+      <div class="col-12 col-lg-7 d-flex flex-column align-items-center">
+        <h1 class="text-center mb-4">Buscar país</h1>
+
+        <input type="text" id="BuscarPais" class="form-control mb-3 w-75" placeholder="Ej: Argentina">
+
+        <button class="btn btn-primary btn-lg w-75 mb-3" onclick="buscarPais()">Buscar</button>
+
+        <div id="resultado" class="w-75"></div>
+      </div>
+
+      <!-- TOP 5 -->
+      <div class="col-12 col-lg-5">
+        <h1 class="text-center mb-2">Top 5 Países</h1>
+        <hr>
+
+        <h2 class="text-center">Más población</h2>
+        <table class="table mt-2" id="tablaPoblacion">
+          <thead>
+            <tr><th>País</th><th>Población</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h2 class="text-center mt-4">Más superficie</h2>
+        <table class="table mt-2" id="tablaSuperficie">
+          <thead>
+            <tr><th>País</th><th>Área (km²)</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h2 class="text-center mt-4">Más idiomas hablados</h2>
+        <table class="table mt-2" id="tablaIdiomas">
+          <thead>
+            <tr><th>País</th><th>Cantidad de idiomas</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <p id="error" class="text-danger text-center"></p>
+      </div>
+
     </div>
-
-    <!-- TOP 5 -->
-
-    <div class="container-top5">
-      <h1 class="title-top5">Top 5 Países <hr></h1>
-
-      <table class="tabla-info" id="tablaPoblacion">
-        <h2 class="subtitle-top5"> Más población</h2>
-        <thead>
-          <tr><th>País</th><th>Población</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <h2 class="subtitle-top5"> Más superficie</h2>
-      <table class="tabla-info" id="tablaSuperficie">
-        <thead>
-          <tr><th>País</th><th>Área (km²)</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <h2 class="subtitle-top5"> Más idiomas hablados</h2>
-      <table class="tabla-info" id="tablaIdiomas">
-        <thead>
-          <tr><th>País</th><th>Cantidad de idiomas</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <p id="error" class="error"></p>
-    </div>
-
   </section>
 
   <script src="JS/BuscarPais.js"></script>
   <script src="JS/Top5.js"></script>
   <script src="JS/main.js"></script>
+
 </body>
 </html>
